@@ -15,14 +15,17 @@ import { stripeWebhook } from './controllers/orderController.js'
 
 const app = express()
 const port = process.env.PORT || 10000
-const allowedOrigin = ['http://localhost:5173']
+const allowedOrigin = [
+  'http://localhost:5173',
+  'https://your-frontend-name.vercel.app'  // Add your real Vercel URL here
+]
 
 
 app.post('/stripe',express.raw({type:'application/json'}),stripeWebhook)
 // Middlewares....
 app.use(express.json())
 app.use(cookieParser())
-app.use(cors({ origin: allowedOrigin , credentials: true }))
+app.use(cors({ origin: allowedOrigin, credentials: true }))
 
 // Calling Function That Will Connect With Database
 await connectDb()

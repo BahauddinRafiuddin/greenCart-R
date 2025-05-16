@@ -14,7 +14,7 @@ import { stripeWebhook } from './controllers/orderController.js'
 
 
 const app = express()
-const port = process.env.PORT || 4000
+const port = process.env.PORT || 10000
 const allowedOrigin = ['http://localhost:5173']
 
 

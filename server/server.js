@@ -17,7 +17,7 @@ const app = express()
 const port = process.env.PORT || 10000
 const allowedOrigin = [
   'http://localhost:5173',
-  'https://your-frontend-name.vercel.app'  // Add your real Vercel URL here
+  'https://green-cart-r-frontend-qzuigtu7b-bahauddinrafiuddins-projects.vercel.app'  // Add your real Vercel URL here
 ]
 
 
